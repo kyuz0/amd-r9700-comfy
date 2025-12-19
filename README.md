@@ -1,17 +1,24 @@
 ```
-███████╗████████╗██████╗ ██╗██╗  ██╗      ██╗  ██╗ █████╗ ██╗      ██████╗ 
-██╔════╝╚══██╔══╝██╔══██╗██║╚██╗██╔╝      ██║  ██║██╔══██╗██║     ██╔═══██╗
-███████╗   ██║   ██████╔╝██║ ╚███╔╝       ███████║███████║██║     ██║   ██║
-╚════██║   ██║   ██╔══██╗██║ ██╔██╗       ██╔══██║██╔══██║██║     ██║   ██║
-███████║   ██║   ██║  ██║██║██╔╝ ██╗      ██║  ██║██║  ██║███████╗╚██████╔╝
-╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝      ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ 
+ _____            _____  ______ ____  _   _    ___ ______ ___   ___  
+|  __ \     /\   |  __ \|  ____/ __ \| \ | |  / _ \____  / _ \ / _ \ 
+| |__) |   /  \  | |  | | |__ | |  | |  \| | | (_) |  / / | | | | | |
+|  _  /   / /\ \ | |  | |  __|| |  | | . ` |  \__, | / /| | | | | | |
+| | \ \  / ____ \| |__| | |___| |__| | |\  |    / / / / | |_| | |_| |
+|_|  \_\/_/    \_\_____/|______\____/|_| \_|   /_/ /_/   \___/ \___/ 
+                                                                     
+                         _____   _____  _____   ____  
+                   /\   |_   _| |  __ \|  __ \ / __ \ 
+                  /  \    | |   | |__) | |__) | |  | |
+                 / /\ \   | |   |  ___/|  _  /| |  | |
+                / ____ \ _| |_  | |    | | \ \| |__| |
+               /_/    \_\_____| |_|    |_|  \_\\____/ 
 
-                         I M A G E   &   V I D E O                        
+                          C O M F Y   U I                      
 ```
 
-# AMD R9700 — Image & Video Toolbox
+# AMD R9700 —  ComfyUI Toolbox
 
-A Fedora **toolbox** image with a full **ROCm environment** for **image & video generation** on **AMD Ryzen AI Max “R9700 AI PRO” (gfx1201)**. It includes support for **Qwen Image/Edit** and **WAN 2.2** models. If you’re looking for sandboxes to run LLMs with llama.cpp, see: [https://github.com/kyuz0/amd-r9700-toolboxes](https://github.com/kyuz0/amd-r9700-toolboxes)
+A Fedora **toolbox** image with a full **ROCm environment** for **image & video generation** on **AMD Ryzen AI Max “R9700 AI PRO” (gfx1201)**. It includes support for **Qwen Image/Edit** and **WAN 2.2** models. If you’re looking for sandboxes to run LLMs with llama.cpp, see: [https://github.com/kyuz0/amd-r9700-comfy](https://github.com/kyuz0/amd-r9700-comfy)
 
 > Tested on Framework Desktop (R9700 AI PRO, 128 GB unified memory). Works on other R9700 AI PRO systems (GMKtec EVO X-2, HP Z2 G1a, etc).
 
