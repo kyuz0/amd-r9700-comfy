@@ -89,12 +89,9 @@ printf 'GPU    : %s\n\n' "$GPU"
 printf 'Repo   : https://github.com/kyuz0/amd-r9700-comfy\n'
 printf 'Image  : docker.io/kyuz0/amd-r9700-comfy:latest\n\n'
 printf 'Included:\n'
-printf '  - %-16s → %s\n' "Qwen Image Studio" "start_qwen_studio (http://localhost:8000)"
-printf '  - %-16s → %s\n' "WAN 2.2 (CLI)"     "cd /opt/wan-video-studio && python generate.py ..."
 printf '  - %-16s → %s\n' "ComfyUI"            "start_comfy_ui (http://localhost:8000)"
 echo
 printf 'SSH tip: ssh -L 8000:localhost:8000 user@host\n\n'
 
 # Aliases
-alias start_qwen_studio='cd /opt/qwen-image-studio && uvicorn qwen-image-studio.server:app --reload --host 0.0.0.0 --port 8000'
-alias start_comfy_ui='cd /opt/ComfyUI && python main.py --port 8000 --output-directory $HOME/comfy-outputs --disable-mmap --fp32-vae'
+alias start_comfy_ui='cd /opt/ComfyUI && python main.py --port 8000 --output-directory $HOME/comfy-outputs'

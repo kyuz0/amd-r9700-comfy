@@ -7,7 +7,7 @@ CONFY_DIR="/opt/ComfyUI"
 YAML_FILE="$CONFY_DIR/extra_model_paths.yaml"
 MODEL_DIR="$HOME/comfy-models"
 
-mkdir -p "$MODEL_DIR"/{text_encoders,vae,diffusion_models}
+mkdir -p "$MODEL_DIR"/{text_encoders,vae,diffusion_models,loras}
 
 cat > "$YAML_FILE" <<EOF
 comfyui:
@@ -17,6 +17,9 @@ comfyui:
     vae: vae
     diffusion_models: diffusion_models
     unet: unet
+    loras: loras
+    latent_upscale_models: latent_upscale_models
+    clip_vision: clip_vision
 EOF
 
 echo "✅ Wrote $YAML_FILE"

@@ -18,6 +18,7 @@ RUN python -m pip install --upgrade pip setuptools wheel
 COPY scripts/get_wan22.sh /opt/
 COPY scripts/set_extra_paths.sh /opt/
 COPY scripts/get_qwen_image.sh /opt/
+COPY scripts/get_hunyuan15.sh /opt/
 
 # ROCm + PyTorch (TheRock, include torchaudio for resolver; remove later)
 RUN python -m pip install \

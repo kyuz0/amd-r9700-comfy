@@ -35,7 +35,7 @@ dl() {
 
 echo "Which Qwen variant do you want to download?"
 echo "  1) Qwen-Image (20B text-to-image)"
-echo "  2) Qwen-Image-Edit (image editing)"
+echo "  2) Qwen-Image-Edit 2511 (image editing)"
 read -rp "Enter 1 or 2: " choice
 
 case "$choice" in
@@ -53,7 +53,7 @@ case "$choice" in
     BASE="Comfy-Org/Qwen-Image_ComfyUI"
     dl "$BASE" "split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" "text_encoders"
     dl "$BASE" "split_files/vae/qwen_image_vae.safetensors" "vae"
-    dl "$REPO" "split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors" "diffusion_models"
+    dl "$REPO" "split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors" "diffusion_models"
     ;;
   *)
     echo "Invalid choice. Exiting."
