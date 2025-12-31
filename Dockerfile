@@ -44,6 +44,7 @@ RUN python -m pip install -r requirements.txt && \
 
 COPY workflows/input/ai-server.jpg /opt/ComfyUI/input/
 COPY workflows/input/ai-server-2.png /opt/ComfyUI/input/
+COPY workflows/*.json /opt/ComfyUI/user/default/workflows/
 
 # ComfyUI plugins
 WORKDIR /opt/ComfyUI/custom_nodes
