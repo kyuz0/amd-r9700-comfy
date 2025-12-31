@@ -1,0 +1,154 @@
+[
+  {
+    "workflow": "Qwen-Image-Edit-2511-FP8-20-Steps.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 192.6746165752411,
+    "timestamp": 1767007362.943232,
+    "env": {}
+  },
+  {
+    "workflow": "Qwen-Image-Edit-2511-FP8-4-Step-LoRA.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 52.41859698295593,
+    "timestamp": 1767007418.6236897,
+    "env": {}
+  },
+  {
+    "workflow": "Qwen-Image-FP8-20-Steps.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 110.98494744300842,
+    "timestamp": 1767007533.2197518,
+    "env": {}
+  },
+  {
+    "workflow": "Qwen-Image-FP8-8-Step-LoRA.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 45.5772545337677,
+    "timestamp": 1767007582.071899,
+    "env": {}
+  },
+  {
+    "workflow": "Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 592.2144665718079,
+    "timestamp": 1767008284.4744046,
+    "env": {}
+  },
+  {
+    "workflow": "Wan2.2-T2V-A14B-FP8-4steps-lora-rank64-Seko-V2.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 551.4406912326813,
+    "timestamp": 1767008841.0464938,
+    "env": {}
+  },
+  {
+    "workflow": "video_hunyuan_video_1.5_720p_i2v.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 746.7300691604614,
+    "timestamp": 1767009592.7917986,
+    "env": {}
+  },
+  {
+    "workflow": "video_hunyuan_video_1.5_720p_t2v.json",
+    "config": "default",
+    "status": "success",
+    "duration_seconds": 724.4923667907715,
+    "timestamp": 1767010322.0153,
+    "env": {}
+  },
+  {
+    "workflow": "Qwen-Image-Edit-2511-FP8-20-Steps.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 198.4407377243042,
+    "timestamp": 1767010525.1397085,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "Qwen-Image-Edit-2511-FP8-4-Step-LoRA.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 53.50241470336914,
+    "timestamp": 1767010581.8702302,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "Qwen-Image-FP8-20-Steps.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 110.307852268219,
+    "timestamp": 1767010695.7535727,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "Qwen-Image-FP8-8-Step-LoRA.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 45.16468405723572,
+    "timestamp": 1767010745.1998737,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 632.0864148139954,
+    "timestamp": 1767011487.538889,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "Wan2.2-T2V-A14B-FP8-4steps-lora-rank64-Seko-V2.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 576.2060587406158,
+    "timestamp": 1767012067.7101793,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "video_hunyuan_video_1.5_720p_i2v.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 812.7611730098724,
+    "timestamp": 1767012884.389415,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  },
+  {
+    "workflow": "video_hunyuan_video_1.5_720p_t2v.json",
+    "config": "miopen_hipblaslt",
+    "status": "success",
+    "duration_seconds": 755.3721420764923,
+    "timestamp": 1767013644.5428255,
+    "env": {
+      "TORCH_BLAS_PREFER_HIPBLASLT": "1",
+      "COMFYUI_ENABLE_MIOPEN": "1"
+    }
+  }
+]
