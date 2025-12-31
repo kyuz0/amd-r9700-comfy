@@ -2,10 +2,10 @@
 
 A Fedora **toolbox** image with a full **ROCm environment** (TheRock Nightlies / ROCm 7) for **image & video generation** on the **AMD Radeon 9700 AI PRO (32GB)**. 
 
-This repository provides a pre-configured Docker container to run **ComfyUI** with validated workflows, leveraging high-performance kernels (AOTriton/MIOpen) specifically tuned for this hardware.
+This repository provides a pre-configured Docker container to run **ComfyUI** with validated workflows on the **AMD Radeon 9700 AI PRO (32GB)**.
 
 > [!NOTE]
-> This setup is optimized for the **32GB VRAM** of the R9700 AI PRO. If you are using a Strix Halo (128GB) dev kit, some settings (like batch sizes) might need adjustment, but the core stack remains compatible.
+> This setup is **configured** for the **32GB VRAM** of the R9700 AI PRO. If you are using a Strix Halo (128GB) dev kit, some settings (like batch sizes) might need adjustment, but the core stack remains compatible.
 
 ---
 
@@ -26,7 +26,7 @@ The repository comes with a collection of ComfyUI workflows pre-validated on thi
 
 | Workflow | Type | Description |
 | :--- | :--- | :--- |
-| **HunyuanVideo 1.5** | I2V / T2V | 4-step LoRA, 720p resolution. Optimized for 32GB. |
+| **HunyuanVideo 1.5** | I2V / T2V | 4-step LoRA, 720p resolution. Configured for 32GB. |
 | **Qwen Image** | T2I | FP8 Base & Lightning LoRA (4/8 steps). |
 | **Qwen Image Edit** | Image Editing | FP8 Base & Lightning LoRA (4/20 steps). |
 | **Wan 2.2** | I2V / T2V | 14B model with 4-step Lightning LoRA. |
