@@ -1,8 +1,8 @@
 {
   "3": {
     "inputs": {
-      "seed": 134206078078532,
-      "steps": 8,
+      "seed": 695101294492382,
+      "steps": 4,
       "cfg": 1,
       "sampler_name": "euler",
       "scheduler": "simple",
@@ -73,7 +73,7 @@
   },
   "37": {
     "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",
@@ -140,7 +140,7 @@
   },
   "73": {
     "inputs": {
-      "lora_name": "Qwen-Image-Lightning-8steps-V1.0.safetensors",
+      "lora_name": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors",
       "strength_model": 1,
       "model": [
         "37",

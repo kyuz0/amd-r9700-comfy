@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 582257962066119,
+      "seed": 274481695318855,
       "steps": 20,
       "cfg": 2.5,
       "sampler_name": "euler",
@@ -73,7 +73,7 @@
   },
   "37": {
     "inputs": {
-      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
       "weight_dtype": "default"
     },
     "class_type": "UNETLoader",

@@ -34,9 +34,9 @@ dl() {
 }
 
 echo "Which Qwen variant do you want to download?"
-echo "  1) Qwen-Image (20B text-to-image)"
+echo "  1) Qwen-Image 2512 (20B text-to-image)"
 echo "  2) Qwen-Image-Edit 2511 (image editing)"
-echo "  3) Qwen-Image-Lightning LoRA (8-steps)"
+echo "  3) Qwen-Image-Lightning LoRA (4-steps)"
 echo "  4) Qwen-Image-Edit-Lightning LoRA (4-steps, bf16)"
 
 # Check if an argument is provided
@@ -49,8 +49,8 @@ fi
 case "$choice" in
   1)
     REPO="Comfy-Org/Qwen-Image_ComfyUI"
-    echo "==> Downloading Qwen-Image (20B)"
-    dl "$REPO" "split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors" "diffusion_models"
+    echo "==> Downloading Qwen-Image 2512 (20B)"
+    dl "$REPO" "split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors" "diffusion_models"
     dl "$REPO" "split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" "text_encoders"
     dl "$REPO" "split_files/vae/qwen_image_vae.safetensors" "vae"
     ;;
@@ -64,9 +64,9 @@ case "$choice" in
     dl "$REPO" "split_files/diffusion_models/qwen_image_edit_2511_fp8mixed.safetensors" "diffusion_models"
     ;;
   3)
-    REPO="lightx2v/Qwen-Image-Lightning"
-    echo "==> Downloading Qwen-Image-Lightning LoRA"
-    dl "$REPO" "Qwen-Image-Lightning-8steps-V1.0.safetensors" "loras"
+    REPO="lightx2v/Qwen-Image-2512-Lightning"
+    echo "==> Downloading Qwen-Image-2512-Lightning LoRA"
+    dl "$REPO" "Qwen-Image-2512-Lightning-4steps-V1.0-bf16.safetensors" "loras"
     ;;
   4)
     REPO="lightx2v/Qwen-Image-Edit-2511-Lightning"

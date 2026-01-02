@@ -2,6 +2,7 @@
 import argparse
 import json
 import uuid
+import random
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -61,10 +62,25 @@ def track_execution(ws, prompt_id):
         return end_time - start_time
     return 0 
 
-def benchmark_workflow(server_address, workflow_file):
+def benchmark_workflow(server_address, workflow_file, randomize_seed=False):
     print(f"Loading workflow: {workflow_file}")
     with open(workflow_file, 'r') as f:
         prompt_workflow = json.load(f)
+
+    if randomize_seed:
+        # Helper to randomize seeds in input
+        updated_count = 0
+        for node_id, node in prompt_workflow.items():
+            if "inputs" in node:
+                for key in ["seed", "noise_seed"]:
+                    if key in node["inputs"]:
+                        # Generate a random integer within safe JS integer range
+                        new_seed = random.randint(1, 100000000000000)
+                        node["inputs"][key] = new_seed
+                        updated_count += 1
+                        # print(f"Updated {key} in node {node_id} to {new_seed}")
+        if updated_count > 0:
+            print(f"Randomized {updated_count} seeds.")
 
     # Connect WebSocket
     client_id = str(uuid.uuid4())
@@ -233,14 +249,23 @@ def main():
 
                 # 3. Run Benchmark
                 try:
-                    duration = benchmark_workflow(args.server, filepath)
-                    status = "success" if duration is not None else "failure"
+                    print("--> Cold Start Run...")
+                    duration_cold = benchmark_workflow(args.server, filepath, randomize_seed=True)
+                    
+                    duration_warm = None
+                    if duration_cold is not None:
+                        print("--> Warm Start Run...")
+                        duration_warm = benchmark_workflow(args.server, filepath, randomize_seed=True)
+
+                    status = "success" if duration_cold is not None else "failure"
                     
                     result_entry = {
                         "workflow": filename,
                         "config": config['name'],
                         "status": status,
-                        "duration_seconds": duration if duration else 0,
+                        "duration_seconds": duration_cold if duration_cold else 0, # Keep for backward compatibility
+                        "cold_run_seconds": duration_cold if duration_cold else 0,
+                        "warm_run_seconds": duration_warm if duration_warm else 0,
                         "timestamp": time.time(),
                         "env": config['env']
                     }

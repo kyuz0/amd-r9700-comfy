@@ -26,8 +26,8 @@ The repository comes with a collection of ComfyUI workflows pre-validated on thi
 | Workflow | Type | Description |
 | :--- | :--- | :--- |
 | **HunyuanVideo 1.5** | I2V / T2V | 4-step LoRA, 720p resolution. Configured for 32GB. |
-| **Qwen Image** | T2I | FP8 Base & Lightning LoRA (4/8 steps). |
-| **Qwen Image Edit** | Image Editing | FP8 Base & Lightning LoRA (4/20 steps). |
+| **Qwen Image** | T2I | Qwen Image 2512 (FP8) & Lightning LoRA (4 steps). |
+| **Qwen Image Edit** | Image Editing | Qwen Image Edit 2511 (FP8) & Lightning LoRA (4/20 steps). |
 | **Wan 2.2** | I2V / T2V | 14B model with 4-step Lightning LoRA. |
 
 ---

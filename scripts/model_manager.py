@@ -46,7 +46,7 @@ WORKFLOW_MAPPINGS = [
         "keywords": ["Qwen-Image", "LoRA"],
         "script": "get_qwen_image.sh", 
         "args": ["3"], # 3 = Qwen-Image-Lightning LoRA
-        "name": "Qwen Image + Lightning LoRA"
+        "name": "Qwen Image + Lightning LoRA (4-steps)"
     },
     {
         "keywords": ["Qwen-Image"],
