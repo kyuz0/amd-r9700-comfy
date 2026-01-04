@@ -5,6 +5,10 @@ A Fedora **toolbox** image with a full **ROCm environment** (TheRock Nightlies /
 This repository provides a pre-configured Docker container to run **ComfyUI** with validated workflows on the **AMD Radeon 9700 AI PRO (32GB)**.
 
 
+## Watch the YouTube Video
+
+[![Watch the YouTube Video](https://img.youtube.com/vi/a_xzC7ckwno/maxresdefault.jpg)](https://youtu.be/a_xzC7ckwno)  
+
 
 ---
 
