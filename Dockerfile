@@ -27,7 +27,7 @@ COPY workflows/API /opt/comfy-workflows
 
 # ROCm + PyTorch (TheRock, include torchaudio for resolver; remove later)
 RUN python -m pip install \
-    --index-url https://rocm.nightlies.amd.com/v2-staging/gfx120X-all \
+    --index-url https://rocm.nightlies.amd.com/v2/gfx120X-all \
     --pre torch torchaudio torchvision
 
 WORKDIR /opt
@@ -36,7 +36,7 @@ WORKDIR /opt
 RUN python -m pip install transformers==4.56.2
 
 # ComfyUI
-RUN git clone --depth=1 https://github.com/comfyanonymous/ComfyUI.git /opt/ComfyUI 
+RUN git clone --depth=1 --branch v0.39.2 https://github.com/comfyanonymous/ComfyUI.git /opt/ComfyUI
 WORKDIR /opt/ComfyUI
 RUN python -m pip install -r requirements.txt && \
     python -m pip install --prefer-binary \
@@ -50,7 +50,8 @@ COPY workflows/*.json /opt/ComfyUI/user/default/workflows/
 WORKDIR /opt/ComfyUI/custom_nodes
 RUN git clone --depth=1 https://github.com/cubiq/ComfyUI_essentials /opt/ComfyUI/custom_nodes/ComfyUI_essentials 
 RUN git clone --depth=1 https://github.com/kyuz0/ComfyUI-AMDGPUMonitor /opt/ComfyUI/custom_nodes/ComfyUI-AMDGPUMonitor 
-RUN git clone --depth=1 https://github.com/city96/ComfyUI-GGUF /opt/ComfyUI/custom_nodes/ComfyUI-GGUF 
+RUN git clone --depth=1 https://github.com/kyuz0/ComfyUI-GGUF-H3 /opt/ComfyUI/custom_nodes/ComfyUI-GGUF && \
+    python -m pip install -r /opt/ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
 
 # Qwen Image Studio
 WORKDIR /opt
