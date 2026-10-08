@@ -13,10 +13,11 @@ mkdir -p "$MODEL_HOME"/{text_encoders,vae,diffusion_models,loras}
 mkdir -p "$STAGE"
 
 dl() {
-  local repo="$1"; shift
-  local remote="$1"; shift
-  local subdir="$1"; shift
-  local dest="$MODEL_HOME/$subdir/$(basename "$remote")"
+  local repo="$1"
+  local remote="$2"
+  local subdir="$3"
+  local target_name="${4:-$(basename "$remote")}"
+  local dest="$MODEL_HOME/$subdir/$target_name"
   local staged="$STAGE/$remote"
 
   if [[ -f "$dest" ]]; then
@@ -28,7 +29,6 @@ dl() {
   mkdir -p "$(dirname "$staged")"
   "$HF" download "$repo" "$remote" \
       --repo-type model \
-      --cache-dir "$HF_HOME" \
       --local-dir "$STAGE"
   mv -f "$staged" "$dest"
 }
@@ -38,12 +38,13 @@ echo "  1) Qwen-Image 2512 (20B text-to-image)"
 echo "  2) Qwen-Image-Edit 2511 (image editing)"
 echo "  3) Qwen-Image-Lightning LoRA (4-steps)"
 echo "  4) Qwen-Image-Edit-Lightning LoRA (4-steps, bf16)"
+echo "  5) Qwen-Image 2.1 (text-to-image)"
 
 # Check if an argument is provided
 if [ -n "${1:-}" ]; then
   choice="$1"
 else
-  read -rp "Enter 1, 2, 3 or 4: " choice
+  read -rp "Enter 1, 2, 3, 4 or 5: " choice
 fi
 
 case "$choice" in
@@ -72,6 +73,14 @@ case "$choice" in
     REPO="lightx2v/Qwen-Image-Edit-2511-Lightning"
     echo "==> Downloading Qwen-Image-Edit-Lightning LoRA"
     dl "$REPO" "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors" "loras"
+    ;;
+  5)
+    REPO="Comfy-Org/Qwen-Image-2.1"
+    echo "==> Downloading Qwen Image 2.1"
+    dl "$REPO" "vae/qwen_image_2.1_vae_bf16.safetensors" "vae"
+    dl "$REPO" "text_encoders/qwen3.5_9b_qwen_image_2.1_pe_t2i.int8_convrot.safetensors" "text_encoders"
+    dl "$REPO" "text_encoders/qwen3vl_8b_int8_convrot.safetensors" "text_encoders"
+    dl "$REPO" "diffusion_models/qwen_image_2.1_int8_convrot.safetensors" "diffusion_models"
     ;;
   *)
     echo "Invalid choice. Exiting."
